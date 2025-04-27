@@ -29,7 +29,6 @@
 *.bcf
 *.blg
 *-blx.aux
-*-blx.bib
 *.run.xml
 
 ## Build tool auxiliary files:
