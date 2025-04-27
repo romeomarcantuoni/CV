@@ -1,0 +1,74 @@
+%!TEX TS-program = xelatex 
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[a4paper,skipsamekey,11pt,english,hyphen,colorlinks=true,allcolors=black,breaklinks=true]{curve}
+\usepackage{url}
+\usepackage{xeCJK}
+\usepackage{multicol}
+%\setCJKmainfont{NotoSerifCJKsc-Regular}
+%\setCJKsansfont{NotoSansCJKsc-Regular}
+%\setCJKmonofont{NotoSansMonoCJKsc-Regular}
+\usepackage{fontspec} 
+\setmainfont{EBGaramond-Regular}
+\setsansfont{FiraSans-Regular}
+\setmonofont{EBGaramond-Regular}
+
+%\usepackage{ctex}
+\usepackage{orcidlink}
+\usepackage{csquotes}
+
+%Uncomment for Japanese
+%\flavor{j}
+
+\PassOptionsToPackage{style=ieee,sorting=ydnt,uniquename=init,defernumbers=true}{biblatex}
+\usepackage{settings}
+\DefineBibliographyStrings{english}{url={\textsc{url}}}
+\addbibresource{own-bib.bib}
+\mynames{Marcantuoni/Romeo}
+
+% \definecolor{SwishLineColour}{HTML}{00FFFF}
+% \definecolor{MarkerColour}{HTML}{0000CC}
+
+% \prefixmarker{$\diamond$}
+
+\includecomment{fullonly}
+%\excludecomment{fullonly}
+
+\leftheader{{\LARGE\bfseries\sffamily Romeo Marcantuoni}\par
+\small
+\makefield{\faHome[solid]}{161--0035 Tokyo, Shinjuku, Nakai 2-22-16 Maison de Soleil 201}\par
+\makefield{\faEnvelope[solid]}{\href{mailto:romeo.marcantuoni@gmail.com}{\texttt{romeo.marcantuoni@gmail.com}}}
+\makefield{\faPhone[solid]}{080-9523-7013}\par
+\makefield{\faFlag[solid]}{Belgian}
+\makefield{\faMars[solid]}{Male}
+\makefield{\faBirthdayCake[solid]}{20 May, 1990}\par
+\makefield{\orcidlink{0009-0000-5757-4820}}{\texttt{0009-0000-5757-4820}}
+}
+
+\rightheader{~}
+%\begin{fullonly}
+%\photo[r]{photo}
+%\photoscale{0.15}
+%\end{fullonly}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+\makeheaders[c]
+\raggedright
+\makerubric{pr}
+%\makerubric{basic}
+\makerubric{education}
+\makerubric{employment}
+\makerubric{employment-research}
+\makerubric{employment-pro}
+
+\input{publications}
+
+\makerubric{misc}
+\makerubric{skills}
+
+%\makerubric{referee}
+\input{referee-full}
+
+\end{document}
