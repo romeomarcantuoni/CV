@@ -3,17 +3,11 @@
 
 \documentclass[a4paper,skipsamekey,11pt,english,hyphen,colorlinks=true,allcolors=black,breaklinks=true]{curve}
 \usepackage{url}
-\usepackage{xeCJK}
 \usepackage{multicol}
-%\setCJKmainfont{NotoSerifCJKsc-Regular}
-%\setCJKsansfont{NotoSansCJKsc-Regular}
-%\setCJKmonofont{NotoSansMonoCJKsc-Regular}
-\usepackage{fontspec} 
+\usepackage{fontspec}
 \setmainfont{EBGaramond-Regular}
 \setsansfont{FiraSans-Regular}
 \setmonofont{EBGaramond-Regular}
-
-%\usepackage{ctex}
 \usepackage{orcidlink}
 \usepackage{csquotes}
 
@@ -26,34 +20,32 @@
 \addbibresource{own-bib.bib}
 \mynames{Marcantuoni/Romeo}
 
-% \definecolor{SwishLineColour}{HTML}{00FFFF}
-% \definecolor{MarkerColour}{HTML}{0000CC}
-
-% \prefixmarker{$\diamond$}
-
 \includecomment{fullonly}
 %\excludecomment{fullonly}
 
-\leftheader{{\LARGE\bfseries\sffamily Romeo Marcantuoni}\par
-\small
-\makefield{\faHome[solid]}{161--0035 Tokyo, Shinjuku, Nakai 2-22-16 Maison de Soleil 201}\par
-\makefield{\faEnvelope[solid]}{\href{mailto:romeo.marcantuoni@gmail.com}{\texttt{romeo.marcantuoni@gmail.com}}}
-\makefield{\faPhone[solid]}{080-9523-7013}\par
-\makefield{\faFlag[solid]}{Belgian}
-\makefield{\faMars[solid]}{Male}
-\makefield{\faBirthdayCake[solid]}{20 May, 1990}\par
-\makefield{\orcidlink{0009-0000-5757-4820}}{\texttt{0009-0000-5757-4820}}
+\leftheader{%
+  {\LARGE\bfseries\sffamily Romeo Marcantuoni}\par
+  \vspace{0.5em}
+  \small
+  \makefield{\faMapMarker*}{161–0035 Tokyo, Shinjuku, Nakai 2-22-16 Maison de Soleil 201}\par
+  \makefield{\faEnvelope}{\href{mailto:romeo.marcantuoni@gmail.com}{\texttt{romeo.marcantuoni@gmail.com}}}\quad
+  \makefield{\faPhone}{080-9523-7013}\par
+  \makefield{\faGlobe}{Belgian} \quad
+  \makefield{\faMars}{Male} \quad
+  \makefield{\faBirthdayCake}{20 May 1990}\par
+  \makefield{\faOrcid}{\href{https://orcid.org/0009-0000-5757-4820}{0009-0000-5757-4820}}\par
 }
 
 \rightheader{~}
-%\begin{fullonly}
-%\photo[r]{photo}
-%\photoscale{0.15}
-%\end{fullonly}
+\begin{fullonly}
+\photo[r]{photo}
+\photoscale{0.15}
+\end{fullonly}
 
 \title{Curriculum Vitae}
 
 \begin{document}
+
 \makeheaders[c]
 \raggedright
 \makerubric{pr}
@@ -62,13 +54,9 @@
 \makerubric{employment}
 \makerubric{employment-research}
 \makerubric{employment-pro}
-
 \input{publications}
-
 \makerubric{misc}
 \makerubric{skills}
-
-%\makerubric{referee}
 \input{referee-full}
 
 \end{document}
